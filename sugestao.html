@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulário EmailJS</title>
+  <link rel="stylesheet" href="formulario.css" />
+</head>
+<body>
+  <form id="contact-form">
+    <h2>Enviar Dados</h2>
+
+    <label for="autor">Nome do Autor</label>
+    <input type="text" id="autor" name="autor" placeholder="Digite o nome do autor" required />
+
+    <label for="campus">Campus</label>
+    <input type="text" id="campus" name="campus" placeholder="Digite o campus" required />
+
+    <label for="data">Data</label>
+    <input type="date" id="data" name="data" required />
+
+    <label for="categoria">Categoria</label>
+    <select id="categoria" name="categoria" required>
+      <option value="" disabled selected>Selecione uma categoria</option>
+      <option value="Acadêmico">Acadêmico</option>
+      <option value="Evento">Evento</option>
+      <option value="Esporte">Esporte</option>
+    </select>
+
+    <label for="texto">Texto</label>
+    <textarea id="texto" name="texto" rows="5" placeholder="Digite o conteúdo" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init('9dhq0XjoX-CMfRZsR');
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_db8mljk', 'template_tsyhb5d', this)
+        .then(() => {
+          alert('Mensagem enviada com sucesso!');
+          this.reset();
+        }, (error) => {
+          alert('Erro ao enviar a mensagem: ' + JSON.stringify(error));
+        });
+    });
+  </script>
+</body>
+</html>

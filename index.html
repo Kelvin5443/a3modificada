@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Blog sobre eventos e notícias da FACS" />
+  <title>BLOGFACS | Notícias e Eventos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="script.js"></script>
+  <script src="post.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="Design sem nome (1).png" alt="Logo BLOGFACS" class="logo" />
+          <h1 class="site-title">BLOGFACS</h1>
+        </div>
+        <nav class="main-nav">
+          <button class="menu-toggle" aria-label="Menu">
+            <span class="menu-icon"></span>
+          </button>
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="#sobre-footer" class="nav-link">Sobre</a></li>
+            <li><a href="sugestao.html" class="nav-link">sugira seu post</a></li> 
+            <li><a href="#ultimo-post" class="nav-link">Último Post</a></li>
+            <li><a href="#contato-footer" class="nav-link">Contato</a></li>
+          </ul>
+          <div class="search-box">
+            <form id="search-form">
+              <input type="text" id="search-input" placeholder="Buscar por título..." class="search-input" required list="search-suggestions" />
+              <datalist id="search-suggestions"></datalist>
+              <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="main-content">
+    <section class="featured-post">
+      <div class="container">
+        <article class="featured-article" id="featured-post">
+          <div class="featured-image">
+            <img src="copafacs.png" alt="Copa FACS" />
+          </div>
+          <div class="featured-content">
+            <span class="category-badge">Esportes</span>
+            <h2 class="featured-title">Copa FACS: Primeiro dia cheio de emoções</h2>
+            <p class="featured-excerpt">O primeiro dia da Copa FACS foi marcado por goleadas e viradas emocionantes em várias modalidades esportivas.</p>
+            <a href="https://noticiasavera.com.br/domingo-de-finais-marca-o-encerramento-da-copa-facs-2025-com-jogos-decisivos-e-viradas-emocionantes/" target="_blank" rel="noopener noreferrer" class="read-more-btn">Continue lendo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="carousel-section">
+      <div class="container">
+        <h2 class="section-title">Destaques em Fotos</h2>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="integraçao.jpg" alt="Evento acadêmico" />
+              <div class="slide-caption">Evento de integração</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="fax.jpg" alt="Campus" />
+              <div class="slide-caption">Nossas instalações</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="inte.jpeg" alt="Aula prática" />
+              <div class="slide-caption">Atividades práticas</div>
+            </div>
+          </div>
+          <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-dots">
+            <button class="dot active"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recent-posts">
+      <div class="container">
+        <h2 class="section-title">Últimas Publicações</h2>
+        <span id="ultimo-post" class="footer-anchor"></span>
+        <div id="last-post-container" class="last-post-highlight" style="display: none;"></div>
+        <div id="posts-container" class="posts-grid">
+          <div class="search-loading" id="search-loading">
+            <i class="fas fa-spinner fa-spin"></i> Pesquisando...
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span id="sobre-footer" class="footer-anchor"></span>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-title">Sobre o BLOGFACS</h3>
+          <p>O blog oficial de notícias e eventos da faculdade, trazendo as últimas atualizações sobre esportes, atividades acadêmicas e vida estudantil.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-title">Links Rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#sobre-footer">Sobre</a></li>
+            <li><a href="#ultimo-post">Último Post</a></li>
+            <li><a href="#contato-footer">Contato</a></li>
+          </ul>
+        </div>
+        <span id="contato-footer" class="footer-anchor"></span>
+        <div class="footer-col">
+          <h3 class="footer-title">Contato</h3>
+          <address>
+            <p><i class="fas fa-map-marker-alt"></i> Feira de Santana - BA</p>
+            <p><i class="fas fa-phone"></i> (75) 1234-5678</p>
+            <p><i class="fas fa-envelope"></i> contato@blogfacs.edu.br</p>
+          </address>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+  
+  </script>
+</body>
+</html>
